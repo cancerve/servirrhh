@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>MERCADO VIRTUAL DE VENALCASA</title>
+<title>SS :: Sistema en Linea para los Servicios de RRHH de VENALCASA</title>
 <link rel="shortcut icon" href="../../../images/favicon.ico"/>
 <link rel="stylesheet" type="text/css" href="../../../css/estilo.css">
 <link rel="stylesheet" href="../../../css/jquery-ui.css" />
@@ -14,7 +14,12 @@
 <body>
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
-    <td height="25" colspan="2" align="center"><img src="../../../images/head.jpg" width="963" height="43"  alt=""/></td>
+    <td height="25" colspan="2" align="center"><table width="972" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="../../../images/head1.jpg" width="316" height="25"  alt=""/></td>
+        <td align="right"><img src="../../../images/head2.jpg" width="42" height="25"  alt=""/></td>
+      </tr>
+    </table></td>
   </tr>
   <tr bgcolor="#ffffff" >
     <td height="1" colspan="2" align="center"><img src="../../../images/blank.gif" width="100" height="1"  alt=""/></td>
@@ -26,12 +31,12 @@
     <td height="1" colspan="2" align="center"><img src="../../../images/blank.gif" width="100" height="1"  alt=""/></td>
   </tr>
   <tr bgcolor="#ffffff" >
-    <td width="75%" height="107" align="right" bgcolor="#ffffff"><table width="966" border="0" cellspacing="0" cellpadding="0">
+    <td width="75%" height="100" align="right" bgcolor="#ffffff"><table width="966" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td height="107" class="Blanquita" style="font-size:18px" background="../../../images/head4.png">&nbsp;</td>
+        <td height="100" class="Blanquita" style="font-size:18px" background="../../../images/head3.jpg">&nbsp;</td>
       </tr>
     </table></td>
-    <td width="23%" align="center" bgcolor="#ff000b">&nbsp;</td>
+    <td width="23%" align="center" bgcolor="#079bd0">&nbsp;</td>
   </tr>
   <tr bgcolor="#ffffff" >
     <td height="1" colspan="2" align="center"><img src="../../../images/blank.gif" width="100" height="1"  alt=""/></td>
@@ -82,14 +87,14 @@
               <tr>
                 <td><p>Hemos enviado un mensaje con su nueva clave de acceso a su correo: <strong><?php echo $_GET['AF_Correo']?></strong></p>
                   <p>Ya puede realizar el ingreso y actualización de datos en el sistema.</p>
-                  <p>En caso de no recibir el mensaje enviado por el <strong>Sistema de Mercado Virtual de VENALCASA </strong>en su bandeja de entrada del correo que nos suministr&oacute;, se le recomienda revisar la carpeta de<strong> Correos no Deseados (Spam)</strong>.</p>
-                  <p>En última instancia se puede comunicar con nosotros al correo: <a href="mailto:mercadovirtual@venalcasa.net.ve">mercadovirtual@venalcasa.net.ve</a><a href="mailto:soporte.mercadov@venalcasa.net.ve"></a> indicando su problema.</p></td>
+                  <p>En caso de no recibir el mensaje enviado por el <strong>Sistema  </strong>en su bandeja de entrada del correo que nos suministr&oacute;, se le recomienda revisar la carpeta de<strong> Correos no Deseados (Spam)</strong>.</p>
+                  <p>En última instancia se puede comunicar con nosotros al correo: <a href="mailto:ssrrhh@venalcasa.net.ve">ssrrhh@venalcasa.net.ve</a><a href="mailto:ssrrhh@venalcasa.net.ve"></a> indicando su problema.</p></td>
               </tr>
               <tr>
                 <td style="text-align: justify">&nbsp;</td>
               </tr>
               <tr>
-                <td align="center"><input name="button2" type="button" class="BotonRojo" id="button2" value="[ Iniciar Sesion ]" onClick="javascript:window.location='../../../../index.php'" /></td>
+                <td align="center"><input name="button2" type="button" class="BotonRojo" id="button2" value="Iniciar Sesion" onClick="javascript:window.location='../../../../index.php'" /></td>
               </tr>
               <tr>
                 <td style="text-align: justify">&nbsp;</td>
@@ -109,13 +114,13 @@
                 </tr>
                 <tr>
                   <td><p>Los datos suministrados por usted NO estan registrados en nuestra Base de Datos. Verifique haber introducido los datos correctamente y vuelva a intentarlo.</p>
-                    <p>En última instancia se puede comunicar con nosotros al correo: <a href="mailto:mercadovirtual@venalcasa.net.ve">mercadovirtual@venalcasa.net.ve</a><a href="mailto:soporte.mercadov@venalcasa.net.ve"></a> indicando su problema.</p></td>
+                    <p>En última instancia se puede comunicar con nosotros al correo:<a href="mailto:ssrrhh@venalcasa.net.ve">ssrrhh@venalcasa.net.ve</a><a href="mailto:ssrrhh@venalcasa.net.ve"></a> indicando su problema.</p></td>
                 </tr>
                 <tr>
                   <td style="text-align: justify">&nbsp;</td>
                 </tr>
                 <tr>
-                  <td align="center"><input name="button" type="button" class="BotonRojo" id="button" value="[ Reintentar ]" onClick="javascript:window.location='index.php'" /></td>
+                  <td align="center"><input name="button" type="button" class="BotonRojo" id="button" value="Reintentar" onClick="javascript:window.location='index.php'" /></td>
                 </tr>
                 <tr>
                   <td style="text-align: justify">&nbsp;</td>

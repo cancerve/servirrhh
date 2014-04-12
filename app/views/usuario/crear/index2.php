@@ -16,7 +16,7 @@
 ?>
 <html>
 <head>
-<title>MERCADO VIRTUAL DE VENALCASA</title>
+<title>SS :: Sistema en Linea para los Servicios de RRHH de VENALCASA</title>
 <link rel="shortcut icon" href="../../../images/favicon.ico"/>
 <link rel="stylesheet" type="text/css" href="../../../css/estilo.css">
 <link rel="stylesheet" href="../../../css/jquery-ui.css" />
@@ -30,7 +30,12 @@
 <body><tr bordercolor="#FFFFFF" bgcolor="#FFFFFF"><td colspan="5"><tr><td valign="bottom"><tr><td>
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
-    <td height="25" colspan="2" align="center"><img src="../../../images/head.jpg" width="963" height="43"  alt=""/></td>
+    <td height="25" colspan="2" align="center"><table width="972" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="../../../images/head1.jpg" width="316" height="25"  alt=""/></td>
+        <td align="right"><img src="../../../images/head2.jpg" width="42" height="25"  alt=""/></td>
+      </tr>
+    </table></td>
   </tr>
   <tr bgcolor="#ffffff" >
     <td height="1" colspan="2" align="center"><img src="../../../images/blank.gif" width="100" height="1"  alt=""/></td>
@@ -42,12 +47,12 @@
     <td height="1" colspan="2" align="center"><img src="../../../images/blank.gif" width="100" height="1"  alt=""/></td>
   </tr>
   <tr bgcolor="#ffffff" >
-    <td width="75%" height="107" align="right" bgcolor="#ffffff"><table width="966" border="0" cellspacing="0" cellpadding="0">
+    <td width="75%" height="100" align="right" bgcolor="#ffffff"><table width="966" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td height="107" class="Blanquita" style="font-size:18px" background="../../../images/head4.png">&nbsp;</td>
+        <td height="100" class="Blanquita" style="font-size:18px" background="../../../images/head3.jpg">&nbsp;</td>
       </tr>
     </table></td>
-    <td width="23%" align="center" bgcolor="#ff000b">&nbsp;</td>
+    <td width="23%" align="center" bgcolor="#079bd0">&nbsp;</td>
   </tr>
   <tr bgcolor="#ffffff" >
     <td height="1" colspan="2" align="center"><img src="../../../images/blank.gif" width="100" height="1"  alt=""/></td>
@@ -147,8 +152,8 @@
               <td>&nbsp;</td>
               </tr>
             <tr valign="baseline">
-              <td colspan="4" align="right" nowrap="nowrap"><input name="Enviar" type="submit" class="BotonRojo"  value="[ Registrar ]" id="Enviar">
-                <input name="button2" type="button" class="BotonRojo" id="button2" value="[ Cancelar ]" onClick="javascript:window.location='../../salirView.php'" />
+              <td colspan="4" align="right" nowrap="nowrap"><input name="Enviar" type="submit" class="BotonRojo"  value="Registrar" id="Enviar">
+                <input name="button2" type="button" class="BotonRojo" id="button2" value="Cancelar" onClick="javascript:window.location='../../salirView.php'" />
                 <input name="origen" type="hidden" id="origen" value="UserCrear2">              </td>
             </tr>
             </table></td>

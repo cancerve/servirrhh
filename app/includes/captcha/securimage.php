@@ -258,7 +258,7 @@ class Securimage {
    *
    * @var string
    */
-  var $multi_text_color = "#dd8200,#cf0f1b,#000000";
+  var $multi_text_color = "#ff141f,#079bd0,#000000";
 
   /**
    * Set to true to make the characters appear transparent.
@@ -297,7 +297,7 @@ class Securimage {
    * @see Securimage::$draw_lines
    * @var string
    */
-  var $line_color = "#dd8200";
+  var $line_color = "#ff141f";
 
   /**
    * How far apart to space the lines from eachother in pixels.

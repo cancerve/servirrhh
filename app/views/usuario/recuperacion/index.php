@@ -8,7 +8,7 @@ $objEmpresa = new Empresa();
 ?>
 <html>
 <head>
-<title>MERCADO VIRTUAL DE VENALCASA</title>
+<title>SS :: Sistema en Linea para los Servicios de RRHH de VENALCASA</title>
 <link rel="shortcut icon" href="../../../images/favicon.ico"/>
 <link rel="stylesheet" type="text/css" href="../../../css/estilo.css">
 <link rel="stylesheet" href="../../../css/jquery-ui.css" />
@@ -23,7 +23,12 @@ $objEmpresa = new Empresa();
 <body>
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
-    <td height="25" colspan="2" align="center"><img src="../../../images/head.jpg" width="963" height="43"  alt=""/></td>
+    <td height="25" colspan="2" align="center"><table width="972" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="../../../images/head1.jpg" width="316" height="25"  alt=""/></td>
+        <td align="right"><img src="../../../images/head2.jpg" width="42" height="25"  alt=""/></td>
+      </tr>
+    </table></td>
   </tr>
   <tr bgcolor="#ffffff" >
     <td height="1" colspan="2" align="center"><img src="../../../images/blank.gif" width="100" height="1"  alt=""/></td>
@@ -35,12 +40,12 @@ $objEmpresa = new Empresa();
     <td height="1" colspan="2" align="center"><img src="../../../images/blank.gif" width="100" height="1"  alt=""/></td>
   </tr>
   <tr bgcolor="#ffffff" >
-    <td width="75%" height="107" align="right" bgcolor="#ffffff"><table width="966" border="0" cellspacing="0" cellpadding="0">
+    <td width="75%" height="100" align="right" bgcolor="#ffffff"><table width="966" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td height="107" class="Blanquita" style="font-size:18px" background="../../../images/head4.png">&nbsp;</td>
+        <td height="100" class="Blanquita" style="font-size:18px" background="../../../images/head3.jpg">&nbsp;</td>
       </tr>
     </table></td>
-    <td width="23%" align="center" bgcolor="#ff000b">&nbsp;</td>
+    <td width="23%" align="center" bgcolor="#079bd0">&nbsp;</td>
   </tr>
   <tr bgcolor="#ffffff" >
     <td height="1" colspan="2" align="center"><img src="../../../images/blank.gif" width="100" height="1"  alt=""/></td>
@@ -101,31 +106,14 @@ $objEmpresa = new Empresa();
                 &nbsp;Ej. dd/mm/aaaa</td>
             </tr>
             <tr valign="baseline">
-              <td nowrap="nowrap" align="right">Empresa:</td>
-              <td align="left"><select name="empresa_NU_IdEmpresa" required id="empresa_NU_IdEmpresa" style="width:350px">
-                <option selected="selected">[ Seleccione ]</option>
-                <?php 
-					$rsEmpresa=$objEmpresa->listarEmpresa($objConexion);
-					for($i=0;$i<$objConexion->cantidadRegistros($rsEmpresa);$i++){
-						  $value=$objConexion->obtenerElemento($rsEmpresa,$i,"NU_IdEmpresa");
-						  $des=$objConexion->obtenerElemento($rsEmpresa,$i,"AF_RazonSocial");
-						  $selected="";
-/*						  if($pais_AL_CodPais==$value){
-							  $selected="selected='selected'";
-						  }*/
-						  echo "<option value=".$value." ".$selected.">".$des."</option>";
-					}  
-				?>
-              </select></td>
-            </tr>
-            <tr valign="baseline">
               <td nowrap="nowrap" align="right">&nbsp;</td>
               <td>&nbsp;</td>
             </tr>
             <tr valign="baseline">
               <td nowrap="nowrap" align="right">&nbsp;</td>
-              <td><input name="Enviar" type="submit" class="BotonRojo"  value="[ Recuperar ]" id="Enviar">
-                <input name="button2" type="button" class="BotonRojo" id="button2" value="[ Cancelar ]" onClick="javascript:window.location='../../../../index.php'" />
+              <td><input name="Enviar" type="submit" class="BotonRojo"  value="Recuperar" id="Enviar">
+                <input name="button2" type="button" class="BotonRojo" id="button2" value="Cancelar" onClick="javascript:window.location='../../../../index.php'" />
+                <input name="empresa_NU_IdEmpresa" type="hidden" id="empresa_NU_IdEmpresa" value="3">
                 <input name="origen" type="hidden" id="origen" value="UserRecuperacion">
                 </td>
             </tr>

@@ -9,7 +9,7 @@
 	require_once("../includes/constantes.php");	
 	require_once("../includes/captcha/securimage.php");	
 	require_once("../model/usuarioModel.php");
-	require_once("../model/saimeModel.php");	
+	//require_once("../model/saimeModel.php");	
 ?>
 <?php
 if(isset($_POST["submit"])){
@@ -21,7 +21,7 @@ if(isset($_POST["submit"])){
 
 		$objConexion	= new conexion(SERVER,USER,PASS,DB);
 		$objUsuario		= new Usuario();
-		$objSaime		= new Saime();
+		//$objSaime		= new Saime();
 		$objImgCode 	= new Securimage();
 
 		$existe		= $objUsuario->existeUsuario($objConexion,$NU_Cedula);

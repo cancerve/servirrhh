@@ -41,35 +41,6 @@ class Empresa{
 		$resultado=$objConexion->ejecutar($query);
 		return true;
 	}
-	/*
-	function actualizar($objConexion,$AF_RIF,$ciudad_AF_CodCiudad,$pais_AL_CodPais,$AF_Clasificacion_Empresa,$AF_Razon_Social,$AF_Direccion,$AL_Web,$AF_Correo_Electronico,$AF_Telefono,$AF_Fax){
-		$this->AF_RIF					= $AF_RIF;
-		$this->ciudad_AF_CodCiudad		= $ciudad_AF_CodCiudad;				
-		$this->pais_AL_CodPais			= $pais_AL_CodPais;
-		$this->AF_Clasificacion_Empresa	= $AF_Clasificacion_Empresa;
-		$this->AF_Razon_Social			= $AF_Razon_Social;
-		$this->AF_Direccion				= $AF_Direccion;
-		$this->AL_Web					= $AL_Web;
-		$this->AF_Correo_Electronico	= $AF_Correo_Electronico;
-		$this->AF_Telefono				= $AF_Telefono;
-		$this->AF_Fax					= $AF_Fax;
-		
-		$query="UPDATE empresa SET
-				ciudad_AF_CodCiudad='".$this->ciudad_AF_CodCiudad."',				
-				pais_AL_CodPais='".$this->pais_AL_CodPais."',
-				AF_Clasificacion_Empresa='".$this->AF_Clasificacion_Empresa."',
-				AF_Razon_Social='".$this->AF_Razon_Social."',
-				AF_Direccion='".$this->AF_Direccion."',
-				AL_Web='".$this->AL_Web."',
-				AF_Correo_Electronico='".$this->AF_Correo_Electronico."',
-				AF_Telefono='".$this->AF_Telefono."',
-				AF_Fax='".$this->AF_Fax."'				
-				WHERE AF_RIF='".$this->AF_RIF."'";
-		$resultado=$objConexion->ejecutar($query);
-		return true;
-	}
-	
-*/
 	
 	function buscar($objConexion,$NU_IdEmpresa){
 		$this->NU_IdEmpresa=$NU_IdEmpresa;
@@ -90,18 +61,5 @@ class Empresa{
 		$resultado=$objConexion->ejecutar($query);
 		return $resultado;		
 	}
-/*	
-	function obtenerUltimoRIF($objConexion){
-		$query="SELECT MAX(id) as id, AF_RIF
-				FROM empresa";
-		$resultado=$objConexion->ejecutar($query);
-		if($objConexion->cantidadRegistros($resultado)>0){
-			$this->AF_RIF=$objConexion->obtenerElemento($resultado,0,'AF_RIF');
-		}
-		
-		return $this->AF_RIF;		
-	}
-*/		
-
 }
 ?>

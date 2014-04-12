@@ -12,8 +12,20 @@ class Usuario{
 	private $AF_Clave;
 	private $AF_Correo;
 	private $AF_Telefono;
+	private $cargo_NU_IdCargo;
+	private $FE_Ingreso;
+	private $BS_SalarioBasico;
+	private $BS_PrimaAntiguedad;
+	private $BS_PrimaResponsabilidad;
+	private $BS_PrimaEspecializacion;
+	private $BS_PrimaTransporte;
+	private $BS_PrimaOtra;
+	private $BI_ConsolidadoOperaciones;
+	private $BI_Inventario;
+	private $BI_DescuentoPersonal;
+	private $BI_Admin;	
 	private $NU_Activo;
-	private $FE_Registro;	
+	private $FE_Registro;
 
 	function setAF_Clave($AF_Clave)
 	{
@@ -112,7 +124,7 @@ class Usuario{
 				LEFT JOIN empresa AS E ON (E.NU_IdEmpresa=U.empresa_NU_IdEmpresa)
 				LEFT JOIN sede AS S ON (S.NU_IdSede=U.sede_NU_IdSede)
 				LEFT JOIN gerencia AS G ON (G.NU_IdGerencia=U.gerencia_NU_IdGerencia)
-				WHERE NU_IdUsuario='".$this->NU_IdUsuario."'";
+				WHERE NU_IdUsuario=".$this->NU_IdUsuario;
 		
 		$resultado=$objConexion->ejecutar($query);
 		return $resultado;		
@@ -220,7 +232,32 @@ class Usuario{
 		
 		$resultado=$objConexion->ejecutar($query);
 		return true;
-	}		
+	}	
+
+
+////////////////////////////////////
+/*
+	function actualizar_primas($objConexion,$NU_Cedula){
+		$this->NU_Cedula = $NU_Cedula;	
+		
+		$query1="SELECT * 
+				FROM adscripcion AS C
+				WHERE cedula=".$this->NU_Cedula;
+		
+		$RS1 = $objConexion->ejecutar($query1);
+		$this->Cantidad = $objConexion->cantidadRegistros($RS1);
+		
+		if ($this->Cantidad>0){
+			$this->adscripcion 		= $objConexion->obtenerElemento($RS1,0,'adscripcion');
+		}
+		
+		$query="UPDATE usuario SET
+					AL_Adscripcion = '".$this->adscripcion."'
+				WHERE NU_Cedula=".$this->NU_Cedula;
+		
+		$resultado=$objConexion->ejecutar($query);
+	}
+	
 /*		
 	function getLibCodigo(){
 		return $this->id;

@@ -27,7 +27,7 @@ die();
 <!DOCTYPE HTML PUBLIC>
 <html>
 <head>
-<title>MERCADO VIRTUAL DE VENALCASA</title>
+<title>SS :: Sistema en Linea para los Servicios de RRHH de VENALCASA</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <link rel="stylesheet" type="text/css" href="../css/estilo.css">
@@ -60,7 +60,12 @@ die();
 </div>
 <table width="100%" height="500" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
-    <td height="25" colspan="2" align="center"><img src="../images/head.jpg" width="963" height="43"  alt=""/></td>
+    <td height="25" colspan="2" align="center"><table width="972" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="../images/head1.jpg" width="347" height="25"  alt=""/></td>
+        <td align="right"><img src="../images/head2.jpg" width="108" height="25"  alt=""/></td>
+        </tr>
+    </table></td>
   </tr>
   <tr bgcolor="#ffffff" >
     <td height="1" colspan="2" align="center"><img src="../images/blank.gif" width="100" height="1"  alt=""/></td>
@@ -72,12 +77,12 @@ die();
     <td height="1" colspan="2" align="center"><img src="../images/blank.gif" width="100" height="1"  alt=""/></td>
   </tr>
   <tr bgcolor="#ffffff" >
-    <td width="75%" height="107" align="right" bgcolor="#ffffff"><table width="966" border="0" cellspacing="0" cellpadding="0">
+    <td width="75%" height="100" align="right" bgcolor="#ffffff"><table width="966" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td height="107" class="Blanquita" style="font-size:18px" background="../images/head4.png">&nbsp;</td>
+        <td height="100" class="Blanquita" style="font-size:18px" background="../images/head3.jpg">&nbsp;</td>
       </tr>
     </table></td>
-    <td width="23%" align="center" bgcolor="#ff000b">&nbsp;</td>
+    <td width="23%" align="center" bgcolor="#079bd0">&nbsp;</td>
   </tr>
   <tr bgcolor="#ffffff" >
     <td height="1" colspan="2" align="center"><img src="../images/blank.gif" width="100" height="1"  alt=""/></td>
@@ -89,7 +94,7 @@ die();
     <td height="1" colspan="2" align="center"><img src="../images/blank.gif" width="100" height="1"  alt=""/></td>
   </tr>
   <tr>
-    <td colspan="2" align="right" valign="top">
+    <td colspan="2" align="right" valign="top" bgcolor="#F8F8F8">
     <table width="966" border="0" align="center" cellpadding="0" cellspacing="0" class="Textonegro">
       <tr>
         <td width="541" align="left"><span class="Textonegro">Bienvenido(a), <?php echo $_SESSION['AL_NombreApellido']; ?></span></td>
@@ -132,7 +137,7 @@ die();
     <td height="1" colspan="2" align="center"><img src="../images/blank.gif" width="100" height="1"  alt=""/></td>
   </tr>
   <tr>
-    <td colspan="2" align="right" valign="top" bgcolor="#666666">
+    <td colspan="2" align="right" valign="top" bgcolor="#FFFFFF">
     
     <table width="963" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#EFEFEF">
       <tr>
@@ -145,21 +150,34 @@ die();
              
 			 case '1':
 		  ?>
-              <table width="490" border="0" align="center" cellpadding="1" cellspacing="5">
+              <table width="878" border="0" align="center" cellpadding="1" cellspacing="5" class="Textonegro">
                 <tr>
-                  <td width="90" align="center" class="BotonGris"><a href="centralView.php" target="central"><img src="../images/inicio.jpg" width="51" height="51"><br>
-&nbsp;Inicio<br>
-&nbsp;                  </a></td>
-                  <td width="90" align="center" class="BotonGris"><a href="pedido/index.php" target="central"><img src="../images/compra.jpg" width="51" height="51"><br>
-                    &nbsp;Comprar<br>
-                    &nbsp; </a></td>
-                  <td width="90" align="center" class="BotonGris"><a href="historial/index.php" target="central"><img src="../images/historial.jpg" width="51" height="51"  alt=""/><br>
-                    Mis Compras<br>
-                    &nbsp;</a></td>
-                  <td width="90" align="center" class="BotonGris"><a href="#" onClick="abrir_dialog()"><img src="../images/clave.jpg" alt="Cambiar Clave" width="51" height="51" border="0"><br>
+                  <td width="90" align="center"><a href="centralView.php" target="central">
+                      <img src="../images/bton_Inicio.png" width="46" height="46"  alt=""/><br>
+                      Inicio<br>
+                      <br></a>
+                 </td>
+                  <td width="90" align="center"><a href="ctrabajo/index.php" target="central"><img src="../images/bton_CTrabajo.png" width="46" height="46"  alt=""/><br>Constancia<br>
+                    de Trabajo</a></td>
+                  <td width="90" align="center"><a href="#" onClick="abrir_dialog()"><img src="../images/bton_reciboPago.png" width="46" height="47"  alt=""/><br>
+                    Recibo<br>de Pago</a></td>
+                  <td width="90" align="center"><a href="egreso/index.php" target="central" onClick="abrir_dialog()"><img src="../images/bton_CEgreso.png" width="46" height="46"  alt=""/><br>
+                    Constancia<br>
+                    de Egreso
+                  </a></td>
+                  <td width="90" align="center"><a href="#" onClick="abrir_dialog()"><img src="../images/bton_BANAVIH.png" width="46" height="46"  alt=""/><br>
+                    Constancia<br>
+                    de BANAVIH</a></td>
+                  <td width="90" align="center"><a href="#" onClick="abrir_dialog()"><img src="../images/bton_Vacaciones.png" width="46" height="47"  alt=""/><br>
+                    Solicitud de<br>
+                    Vacaciones</a></td>
+                  <td width="90" align="center"><a href="#" onClick="abrir_dialog()"><img src="../images/bton_Fideicomiso.png" width="46" height="46"  alt=""/><br>
+                    Consulta<br>
+                    Fideicomiso</a></td>
+                  <td width="90" align="center"><a href="#" onClick="abrir_dialog()"><img src="../images/Bton_Clave.png" alt="Cambiar Clave" width="46" height="46" border="0"><br>
                     Perfil<br>
                     Usuario </a></td>
-                  <td width="90" align="center" class="BotonGris"><a href="salirView.php"><img src="../images/salir.jpg" alt="Salir del Sistema" width="51" height="51" border="0"><br>
+                  <td width="90" align="center"><a href="salirView.php"><img src="../images/Bton_Salir.png" alt="Salir del Sistema" width="46" height="46" border="0"><br>
                     Salir del<br>
                     Sistema</a></td>
                 </tr>

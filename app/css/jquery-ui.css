@@ -800,7 +800,7 @@ body .ui-tooltip {
 	font-size: 1em;
 }
 .ui-widget-content {
-	border: 1px solid #cf0f1b; /* MANUEL: BORDE DEL WIDGET  */
+	border: 1px solid #079bd0; /* MANUEL: BORDE DEL WIDGET  */
 	background: #ffffff url(images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x;
 	color: #222222;
 }
@@ -808,8 +808,8 @@ body .ui-tooltip {
 	color: #222222;
 }
 .ui-widget-header { /* VENTANAS */
-	border: 1px solid #cf0f1b; /* BORDE DEL TITULO */
-	background: #cf0f1b url(images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x; /* FONDO DE TITULO */
+	border: 1px solid #079bd0; /* BORDE DEL TITULO */
+	background: #079bd0 url(images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x; /* FONDO DE TITULO */
 	color: #FFFFFF; /* COLOR DE FUENTES */
 	font-weight: bold;
 }

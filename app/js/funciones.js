@@ -21,6 +21,7 @@
 	}
 ///////////////////////////////////////CAMPOS FECHA RESTRINTIVAS////////////////////////
 
+
 $(function() {
 	$( "#FE_FechaNac1" ).datepicker({
 		showAnim: 'slide',

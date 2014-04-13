@@ -7,12 +7,10 @@
 	$objConexion= new conexion(SERVER,USER,PASS,DB);
 
 	require_once('../model/usuarioModel.php');
-	//require_once('../model/saimeModel.php');
 	require_once('../model/novedadModel.php');	
 	require_once('../model/empresaModel.php');		
 	
 	$objUsuario = new Usuario();
-	//$objSaime 	= new Saime();
 	$objNovedad	= new Novedad();
 	$objEmpresa	= new Empresa();	
 ?>

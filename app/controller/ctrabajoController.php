@@ -1,5 +1,11 @@
 <?php
-	require_once('../controller/sessionController.php'); 
+	session_start();
+	
+	require_once("../includes/constantes.php");
+	require_once("../includes/conexion.class.php");
+
+	$objConexion= new conexion(SERVER,USER,PASS,DB);
+	
 	require_once('../model/ctrabajoModel.php');
 	require_once('../model/usuarioModel.php');
 
@@ -38,5 +44,25 @@
 
 		header("Location: ../views/ctrabajo/Constancia_Trabajo".$NU_IdTipoCTrabajo.".php?NU_IdCTrabajo=".$NU_IdCTrabajo);
 	}
+	
+////////////////////// VERIFICAR CONSTANCIA /////////////////////////////////
+	if ($_POST['origen']=='Verificacion')
+	{
+		$AF_Codigo = $_POST['AF_Codigo'];
+
+		$RSConstancia 		= $objCTrabajo->buscarXconstancia($objConexion,$AF_Codigo);
+		$cantRSConstancia 	= $objConexion->cantidadRegistros($RSConstancia);
+		
+		if ($cantRSConstancia>0){
+			$NU_IdCTrabajo 		= $objConexion->obtenerElemento($RSConstancia,0,"NU_IdCTrabajo");
+			$NU_IdTipoCTrabajo 	= $objConexion->obtenerElemento($RSConstancia,0,"NU_IdTipoCTrabajo");
+
+			header("Location: ../views/ctrabajo/Constancia_Trabajo".$NU_IdTipoCTrabajo.".php?NU_IdCTrabajo=".$NU_IdCTrabajo);
+		}else{
+			$mensaje = 'El código: <b>'.$_POST['AF_Codigo'].'</b>, no corresponde a ninguna Constancia de Trabajo Valida.';
+			header("Location: ../views/ctrabajo/verificacion/central.php?mensaje=".$mensaje);			
+		}
+	
+	}	
 	
 ?>

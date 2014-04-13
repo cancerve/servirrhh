@@ -105,6 +105,14 @@ class CTrabajo{
 		$resultado=$objConexion->ejecutar($query);
 		return $resultado;		
 	}	
-		
+
+	function buscarXconstancia($objConexion,$AF_Codigo){
+		$this->AF_Codigo=$AF_Codigo;
+		$query="SELECT CT.*
+				FROM ctrabajo AS CT
+				WHERE CT.AF_Codigo='".$this->AF_Codigo."'";
+		$resultado=$objConexion->ejecutar($query);
+		return $resultado;		
+	}			
 }
 ?>

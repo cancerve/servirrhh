@@ -1,5 +1,13 @@
 <?php 
-	require_once('../../controller/sessionController.php');
+	//require_once('../../controller/sessionController.php');
+	
+		session_start();
+	
+	require_once("../../includes/constantes.php");
+	require_once("../../includes/conexion.class.php");
+
+	$objConexion= new conexion(SERVER,USER,PASS,DB);
+	
 	require_once('../../includes/tcpdf/tcpdf.php'); 
 	
 	require_once('../../model/ctrabajoModel.php');
@@ -25,19 +33,17 @@
 	$AL_Apellido 					= utf8_decode(strtoupper($objConexion->obtenerElemento($RS,0,"AL_Apellido")));
 	$NU_Cedula 						= number_format($objConexion->obtenerElemento($RS,0,"NU_Cedula"),0,'','.');
 	$FE_Ingreso 					= setFechaNOSQL($objConexion->obtenerElemento($RS,0,"FE_Ingreso"));
-	$AL_NombreSede 					= $objConexion->obtenerElemento($RS,0,"AL_NombreSede");
-	$AL_NombreGerencia 				= $objConexion->obtenerElemento($RS,0,"AL_NombreGerencia");		
-	$_SESSION['AF_Codigo']			= $objConexion->obtenerElemento($RS,0,"AF_Codigo");	
-	$cargo_NU_IdCargo 				= utf8_decode(strtoupper($objConexion->obtenerElemento($RS,0,"cargo_NU_IdCargo")));
-	$AL_Adscripcion 				= utf8_decode(strtoupper($objConexion->obtenerElemento($RS,0,"AL_Adscripcion")));	
+	$cargo_NU_IdCargo 				= trim(utf8_decode(strtoupper($objConexion->obtenerElemento($RS,0,"cargo_NU_IdCargo"))));
+	$AL_Adscripcion 				= trim(utf8_decode(strtoupper($objConexion->obtenerElemento($RS,0,"AL_Adscripcion"))));	
 	$BS_SalarioBasico 				= $objConexion->obtenerElemento($RS,0,"BS_SalarioBasico");
 	$BS_PrimaAntiguedad 			= $objConexion->obtenerElemento($RS,0,"BS_PrimaAntiguedad");	
 	$BS_PrimaResponsabilidad 		= $objConexion->obtenerElemento($RS,0,"BS_PrimaResponsabilidad");
 	$BS_PrimaEspecializacion 		= $objConexion->obtenerElemento($RS,0,"BS_PrimaEspecializacion");
 	$BS_PrimaTransporte 			= $objConexion->obtenerElemento($RS,0,"BS_PrimaTransporte");
 	$BS_PrimaOtra 					= $objConexion->obtenerElemento($RS,0,"BS_PrimaOtra");	
-	$FE_Solicitud 					= $objConexion->obtenerElemento($RS,0,"FE_Solicitud");
-	
+	$FE_Solicitud 				= $objConexion->obtenerElemento($RS,0,"FE_Solicitud");
+	$_SESSION['AF_Codigo']		= $objConexion->obtenerElemento($RS,0,"AF_Codigo");	
+		
 	$BS_SalarioBasicoLetras			= utf8_decode(strtoupper(convertir_a_letras($BS_SalarioBasico)));
 	$prima1 = '';
 	$prima2 = '';	
@@ -49,15 +55,15 @@
 		$UTResponsabilidadLetras		= strtoupper(convertir_a_letras($UTResponsabilidad));
 		$UTResponsabilidadLetras		= str_replace('BOLIVARES','',$UTResponsabilidadLetras);
 		$BS_PrimaResponsabilidadLetras 	= strtoupper(convertir_a_letras($BS_PrimaResponsabilidad));
-		$prima1 = ', más una Prima de Responsabilidad de '.$UTResponsabilidadLetras.' UNIDADES TRIBUTARIAS ('.$UTResponsabilidad.' U.T.) equivalentes a '.$BS_PrimaResponsabilidadLetras.' (Bs. '.number_format($BS_PrimaResponsabilidad,2,',','.').')';
+		$prima1 = ', más una Prima de Responsabilidad de <b>'.$UTResponsabilidadLetras.' UNIDADES TRIBUTARIAS ('.$UTResponsabilidad.' U.T.)</b> equivalentes a <b>'.$BS_PrimaResponsabilidadLetras.' (Bs. '.number_format($BS_PrimaResponsabilidad,2,',','.').')</b>';
 	}
 	if ($BS_PrimaAntiguedad!='0.00'){
 		$BS_PrimaAntiguedadLetras	 	= utf8_decode(strtoupper(convertir_a_letras($BS_PrimaAntiguedad)));
-		$prima2 = ', más una Prima de Antiguedad de '.$BS_PrimaAntiguedadLetras.' (Bs. '.number_format($BS_PrimaAntiguedad,2,',','.').')';
+		$prima2 = ', más una Prima de Antiguedad de <b>'.$BS_PrimaAntiguedadLetras.' (Bs. '.number_format($BS_PrimaAntiguedad,2,',','.').')</b>';
 	}
 	if ($BS_PrimaEspecializacion!='0.00'){
 		$BS_PrimaEspecializacionLetras 	= utf8_decode(strtoupper(convertir_a_letras($BS_PrimaEspecializacion)));
-		$prima3 = ', más una Prima de Especialización de '.$BS_PrimaEspecializacionLetras.' ('.number_format($BS_PrimaEspecializacion,2,',','.').')';	
+		$prima3 = ', más una Prima de Especialización de <b>'.$BS_PrimaEspecializacionLetras.' ('.number_format($BS_PrimaEspecializacion,2,',','.').')</b>';	
 	}
 	
 	$BS_SalarioBasico					= number_format($BS_SalarioBasico,2,',','.');
@@ -94,17 +100,17 @@ class MYPDF extends TCPDF {
 		$this->SetY(-65);
 		$this->SetFont('helvetica','BI',12);
 		$this->Ln(5);
-		$this->Cell(0,0,'LIC. YURISMAR MEDINA',0,0,'C');
+		$this->Cell(0,0,'LCDA. YURISMAR MEDINA',0,0,'C');
 		$this->Ln(5);
 		$this->Cell(0,0,'DIRECTOR (A) GENERAL DE RECURSOS HUMANOS',0,0,'C');
 		$this->Ln(10);
 		$this->SetFont('helvetica','',8);
-		$this->Cell(0,0,utf8_encode('Constancia que tiene validez por un periodo de Noventa (90) días.'),0,0,'C');
+		$this->Cell(0,0,utf8_encode('Valido por 90 días a partir de la presente fecha.'),0,0,'C');
 		$this->Ln(10);
 		$this->Cell(0,0,utf8_encode('Verifique la presente en: www.venalcasa.net.ve/servirrhh e introduzca: ').$_SESSION['AF_Codigo'],0,0,'C');
 		$this->Ln(3);
 		$this->SetFillColor(232,232,232);	
-		$this->Line(25,258,185,258);
+		$this->Line(25,268,185,268);
 		$this->Ln(5);
 		$this->Cell(0,0,'VENEZOLANA DE ALIMENTOS LA CASA, S.A.',0,0,'C');
 		$this->Ln(3);
@@ -112,7 +118,9 @@ class MYPDF extends TCPDF {
 		$this->Ln(3);
 		$this->Cell(0,0,'Municipio Libertador. Caracas - Venezuela',0,0,'C');
 		$this->Ln(3);
-		$this->Cell(0,0,'Telfs.: 0416.607.77.14',0,0,'C');			
+		$this->Cell(0,0,'Telfs.: 0416.607.77.14',0,0,'C');	
+		$this->Image('../../images/sello.png', 78, 205, 50, 0, 'PNG', '', 'T', false, 300, '', false, false, 0, false, false, false);			
+								
     }
 }
 
@@ -130,7 +138,7 @@ class MYPDF extends TCPDF {
 	$pdf->SetFont('helvetica', '', 11);
 	
 	$pdf->Ln(60);
-	$pdf->writeHTMLCell(0,20,'','',utf8_encode('<span style="line-height:25px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quien suscribe <b>DIRECTOR (A) GENERAL DE RECURSOS HUMANOS</b> de <b>VENEZOLANA DE ALIMENTOS LA CASA, S.A.</b>, hace constar por medio de la presente, que la (el) ciudadana (o) <b>'.$AL_Apellido.' '.$AL_Nombre.'</b>, Cédula de Identidad N° V- C.I. <b>'.$NU_Cedula.'</b> presta sus servicios en esta Empresa desde el <b>'.$FE_Ingreso.'</b>, desempeñando el cargo de <b>'.$cargo_NU_IdCargo.'</b>, adscrito a <b>'.$AL_Adscripcion.'</b>, con un Sueldo Mensual de <b>'.$BS_SalarioBasicoLetras.' (Bs. '.$BS_SalarioBasico.')</b>'.$prima1.$prima2.$prima3.', y una asignación por concepto de Bono de Alimentación al 0,50% de la Unidad Tributaria Vigente, Monto Promedio Mensual de <b>MIL NOVECIENTOS CINCO BOLIVARES CON 00/100 CTS (Bs. 1.905,00)</b>.</span>'),0,10,0,true,'J',true);
+	$pdf->writeHTMLCell(0,5,'','',utf8_encode('<span style="line-height:25px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quien suscribe <b>DIRECTOR (A) GENERAL DE RECURSOS HUMANOS</b> de <b>VENEZOLANA DE ALIMENTOS LA CASA, S.A.</b>, hace constar por medio de la presente, que la (el) ciudadana (o) <b>'.$AL_Apellido.' '.$AL_Nombre.'</b>, Cédula de Identidad N° V- C.I. <b>'.$NU_Cedula.'</b> presta sus servicios en esta Empresa desde el <b>'.$FE_Ingreso.'</b>, desempeñando el cargo de <b>'.$cargo_NU_IdCargo.'</b>, adscrito a <b>'.$AL_Adscripcion.'</b>, con un Sueldo Mensual de <b>'.$BS_SalarioBasicoLetras.' (Bs. '.$BS_SalarioBasico.')</b>'.$prima1.$prima2.$prima3.', y una asignación por concepto de Bono de Alimentación al <b>0,50%</b> de la Unidad Tributaria Vigente, Monto Promedio Mensual de <b>MIL NOVECIENTOS CINCO BOLIVARES CON 00/100 CTS (Bs. 1.905,00)</b>.</span>'),0,10,0,true,'J',true);
 	
 	$pdf->Ln(10);
 	$pdf->writeHTMLCell(0,20,'','',utf8_encode('<span style="line-height:25px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constancia que se expide a petición de la parte interesada en Caracas a los '.$dia.' días del mes de '.$mes.' del año '.$ano.'.</span>'),0,10,0,true,'J',true);

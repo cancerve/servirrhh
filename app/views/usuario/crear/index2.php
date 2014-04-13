@@ -20,7 +20,11 @@
 <link rel="shortcut icon" href="../../../images/favicon.ico"/>
 <link rel="stylesheet" type="text/css" href="../../../css/estilo.css">
 <link rel="stylesheet" href="../../../css/jquery-ui.css" />
-
+<style type="text/css">
+body {
+	background-color: #F8F8F8;
+}
+</style>
 <script type="text/javascript" src="../../../js/jquery.js"></script>
 <script type="text/javascript" src="../../../js/jquery-ui.js"></script>
 <script type="text/javascript" src="../../../js/funciones.js"></script>
@@ -32,8 +36,8 @@
   <tr>
     <td height="25" colspan="2" align="center"><table width="972" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td><img src="../../../images/head1.jpg" width="316" height="25"  alt=""/></td>
-        <td align="right"><img src="../../../images/head2.jpg" width="42" height="25"  alt=""/></td>
+        <td><img src="../../../images/head1.jpg" width="347" height="25"  alt=""/></td>
+        <td align="right"><img src="../../../images/head2.jpg" width="108" height="25"  alt=""/></td>
       </tr>
     </table></td>
   </tr>
@@ -64,9 +68,10 @@
     <td height="1" colspan="2" align="center"><img src="../../../images/blank.gif" width="100" height="1"  alt=""/></td>
   </tr>
 </table>
-  <table width="966" border="0" align="center" cellpadding="8" cellspacing="8">
+  <br>
+  <table width="966" border="1" align="center" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td width="100%" valign="top" scope="col">
+                  <td width="100%" valign="top" scope="col" style="border:solid 1px #ffffff">
                   
                   
                   <table width="100%" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#F8F8F8" bgcolor="#FFFFFF">
@@ -169,6 +174,7 @@
                 </table></td>
             </tr>
  </table>
+  <br>
   <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
           <tr bgcolor="#ffffff" >
             <td height="1" colspan="2" align="center"><img src="../../../images/blank.gif" width="100" height="1"  alt=""/></td>

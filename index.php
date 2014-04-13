@@ -256,7 +256,7 @@ div{
                             </tr>
                             <tr>
                               <td align="center"><input id="button" name="button" type="button" class="BotonRojo" value="Atender Solicitud"  onClick="javascript:window.location='app/views/usuario/novedad/index.php'"></td>
-                              <td align="center"><input id="button3" name="button3" type="button" class="BotonRojo" value="Verificar Constancia"  onClick="javascript:window.location='index.php?mensaje=En Construccion'"></td>
+                              <td align="center"><input id="button3" name="button3" type="button" class="BotonRojo" value="Verificar Constancia"  onClick="javascript:window.location='app/views/ctrabajo/verificacion/index.php'"></td>
                             </tr>
                             <tr>
                               <td colspan="5" align="center">&nbsp;</td>

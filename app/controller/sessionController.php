@@ -15,10 +15,10 @@ die();
 	//$ruta = '.:/php/PEAR.:/var/www/VENALCASA/app/includes.:/var/www/VENALCASA/app/model.:';
 	
 	//SERVICIOSHOSTING
-	$ruta = ':/home/venalcas/public_html/servirrhh/app/includes:/home/venalcas/public_html/servirrhh/app/model:';	
+	//$ruta = ':/home/venalcas/public_html/servirrhh/app/includes:/home/venalcas/public_html/servirrhh/app/model:';	
 
 	//EN WINDOWS
-	//$ruta = '.;D:\xampp\php\PEAR.;D:\xampp\htdocs\VENALCASA\servirrhh\app\includes;D:\xampp\htdocs\VENALCASA\servirrhh\app\model;';
+	$ruta = '.;D:\xampp\php\PEAR.;D:\xampp\htdocs\VENALCASA\servirrhh\app\includes;D:\xampp\htdocs\VENALCASA\servirrhh\app\model;';
 
 	set_include_path(get_include_path() . PATH_SEPARATOR . $ruta);
 

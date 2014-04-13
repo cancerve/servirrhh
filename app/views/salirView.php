@@ -58,7 +58,7 @@
         <td class="NegritaMayor" align="center"><p>Se comprobó que ha pasado mucho tiempo inactivo dentro del sistema. Por seguridad usted ha sido desconectado del mismo o usted a decidido cerrar esta sesión.</p></td>
       </tr>
       <tr>
-        <td class="NegritaMayor" align="center"><input name="button2" type="submit" class="BotonRojo" id="button2" value="[ Iniciar Sesion ]" onClick="javascript:window.location='../../index.php'" /></td>
+        <td class="NegritaMayor" align="center"><input name="button2" type="submit" class="BotonRojo" id="button2" value="Iniciar Sesion" onClick="javascript:window.location='../../index.php'" /></td>
       </tr>
     </table></td>
   </tr>

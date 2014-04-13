@@ -56,10 +56,10 @@
     
     <tr>
       <td height="25" align="center"><form name="form1" method="post" action="Constancia_Egreso.php">
-        <table width="350" border="0" cellspacing="2" cellpadding="2" class="Textonegro">
+        <table width="400" border="0" cellspacing="2" cellpadding="2" class="Textonegro">
           <tr>
             <td align="left">Tipo de Constancia:</td>
-            <td align="left"><select name="NU_IdTipoCTrabajo" required id="NU_IdTipoCTrabajo">
+            <td align="left"><select name="NU_IdTipo" required id="NU_IdTipo">
               <option selected="selected">:: Seleccione ::</option>
               <?php 
 					$RSTipoCTrabajo		= $objCTrabajo_Tipo->listarTipos($objConexion);
@@ -75,7 +75,8 @@
           </tr>
           <tr>
             <td align="left">Fecha de Egreso:</td>
-            <td align="left"><input name="fecha_egreso" type="text" required id="fecha_egreso"></td>
+            <td align="left"><input name="FE_Egreso" type="text" required id="FE_FechaNac1"  style="width:110px">
+            &nbsp;Ej. dd/mm/aaaa</td>
           </tr>
           <tr>
             <td align="center">&nbsp;</td>

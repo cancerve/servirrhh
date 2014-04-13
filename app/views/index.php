@@ -161,11 +161,11 @@ die();
                     de Trabajo</a></td>
                   <td width="90" align="center"><a href="#" onClick="abrir_dialog()"><img src="../images/bton_reciboPago.png" width="46" height="47"  alt=""/><br>
                     Recibo<br>de Pago</a></td>
-                  <td width="90" align="center"><a href="egreso/index.php" target="central" onClick="abrir_dialog()"><img src="../images/bton_CEgreso.png" width="46" height="46"  alt=""/><br>
+                  <td width="90" align="center"><a href="egreso/index.php" target="central"><img src="../images/bton_CEgreso.png" width="46" height="46"  alt=""/><br>
                     Constancia<br>
                     de Egreso
                   </a></td>
-                  <td width="90" align="center"><a href="#" onClick="abrir_dialog()"><img src="../images/bton_BANAVIH.png" width="46" height="46"  alt=""/><br>
+                  <td width="90" align="center"><a href="banavih/index.php" target="central"><img src="../images/bton_BANAVIH.png" width="46" height="46"  alt=""/><br>
                     Constancia<br>
                     de BANAVIH</a></td>
                   <td width="90" align="center"><a href="#" onClick="abrir_dialog()"><img src="../images/bton_Vacaciones.png" width="46" height="47"  alt=""/><br>
@@ -254,7 +254,7 @@ die();
     <td colspan="2" valign="top" bgcolor="#F8F8F8">
       <table width="100%" border="0" cellpadding="8" cellspacing="8">
         <tr>
-          <th valign="top" scope="col"><iframe src="centralView.php?mensaje=<?=$_GET['mensaje']?>" name="central" width="963" height="540" vspace="0" scrolling="yes" frameborder="1" style="border:solid 1px #666666"></iframe>        </th>
+          <th valign="top" scope="col"><iframe src="centralView.php?mensaje=<?=$_GET['mensaje']?>" name="central" id="central" width="963" height="540" vspace="0" scrolling="yes" frameborder="1" style="border:solid 1px #666666"></iframe>        </th>
         </tr>
       </table>
     </td>

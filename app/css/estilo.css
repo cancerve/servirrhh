@@ -208,12 +208,12 @@ input {
 input:focus {
 	outline:0px;
     border: 1px solid #ff141f;
-	color: #000000;
+	color: #ff141f;
 	background: #FFFFFF;
 }
 input:hover {
 	border: 1px solid #ff141f;
-	color: #000000;
+	color: #ff141f;
 	background: #FFFFFF;
 }
 textarea{
